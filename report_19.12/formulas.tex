@@ -1,0 +1,31 @@
+\documentclass{article}
+
+% Пакеты для улучшения математических формул
+\usepackage{amsmath}    % Основной пакет для математических выражений
+\usepackage{amsfonts}   % Дополнительные шрифты для математики (например, для множества чисел)
+\usepackage{amssymb}    % Дополнительные символы для математики
+
+\usepackage{tikz}       % Для рисования графиков и диаграмм
+\usepackage{xcolor}     % Цвета для текста и формул
+\usepackage{unicode-math}
+\usepackage[a4paper, margin=1in]{geometry}
+
+\setmathfont{Latin Modern Math}
+
+
+\begin{document}
+
+\begin{eqnarray}
+\text{PPL}_{M}(x_{i})=\frac{ {\textstyle \sum_{k=1}^{K}}\text{PPL}_{M}(t_{k}^{i}|t_{<k }^{i},t_{<i}) }{K} 
+\end{eqnarray}
+
+\begin{multline}
+\text{Minima}_{index}(\text{PPL}_{seq}) = \biggl\{ i \biggm| \min (\text{PPL}_{M}(x_{i-1}), \text{PPL}_{M}(x_{i+1})) - \text{PPL}_{M}(x_{i}) > \theta, \\
+or~\text{PPL}_{M}(x_{i-1}) - \text{PPL}_{M}(x_{i}) > \theta~and~\text{PPL}_{M}(x_{i+1}) = \text{PPL}_{M}(x_{i}) \biggr\}
+\end{multline}
+
+\begin{eqnarray}
+\text{PPL}_{seq} = (\text{PPL}_M(x_1), \text{PPL}_M(x_2), ..., \text{PPL}_M(x_n))
+\end{eqnarray}
+
+\end{document}
